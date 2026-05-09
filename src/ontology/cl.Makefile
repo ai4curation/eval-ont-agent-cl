@@ -9,6 +9,41 @@
 # BUILDING RELEASE PRODUCTS
 # ----------------------------------------
 
+# ----------------------------------------
+# IMPORT CUSTOMIZATION
+# ----------------------------------------
+
+# Protégé may write obsoletion edits into merged_import.owl when MBAO terms
+# carry imported skos:prefLabel annotations. Strip those annotations from MBAO
+# during merged import generation while preserving the rest of the import.
+$(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
+				$(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) merge --input $< \
+		 remove --select "<http://www.informatics.jax.org/marker/MGI:*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/OBA_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/ENVO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/OBI_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/NBO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/PO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/SO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/DDANAT_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/GOCHE_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/CLO_*>" \
+		 remove --select "<http://www.genenames.org/cgi-bin/gene_symbol_report*>" \
+		 extract $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
+		         --force true --copy-ontology-annotations false \
+		         --individuals exclude \
+		         --method BOT \
+		 query --update ../sparql/remove-mbao-skos-prefLabel.ru \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 # Preprocessing: automatically generate text definitions from logical definitions
 $(EDIT_PREPROCESSED): $(SRC) | all_robot_plugins
 	$(ROBOT) flybase:rewrite-def -i $< --dot-definitions --null-definitions \
