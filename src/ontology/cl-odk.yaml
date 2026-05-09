@@ -101,6 +101,9 @@ import_group:
     - id: omo
       module_type: mirror
     - id: mbao
+      use_base: TRUE
+      base_iris:
+        - https://purl.brain-bican.org/ontology/mbao/
       mirror_from: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao-base.owl
     - id: stato
       make_base: TRUE
@@ -175,4 +178,3 @@ components:
         - 2DFTU_HRA_illustrations.csv
     - filename: wmbo-cl-comp.owl
       source: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/main/wmbo-cl-comp.owl
-
