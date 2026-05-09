@@ -102,6 +102,8 @@ import_group:
       module_type: mirror
     - id: mbao
       mirror_from: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao-base.owl
+      annotation_property_exclusions:
+        - skos:prefLabel
     - id: stato
       make_base: TRUE
 pattern_pipelines_group:
