@@ -1,0 +1,6 @@
+{
+  "body": "**Description:**\n\nWhile attempting to obsolete a term in Protégé following the standard CL protocol, I encountered unexpected behavior: the modification occurred in `merged_import.owl` instead of `cl-edit.owl`.\n\nUpon investigation, I found that the term to be obsoleted is also present in `merged_import.owl`, due to an imported `skos:prefLabel` from MBAO. This appears to override the expected editing behavior.\n\nI tested removing the term from `merged_import.owl`, and the issue was resolved—only `cl-edit.owl` was modified as expected.\n\nSince the `skos:prefLabel` values being imported are typically identical to the term label, this issue could be avoided entirely by excluding `skos:prefLabel` imports from MBAO.\n\n**Suggestion:**\nConsider modifying the import pattern for MBAO to exclude `skos:prefLabel`, as it may be unnecessarily duplicative and is interfering with editing workflows.",
+  "comments": [],
+  "title": "[Typo/Bug] Obsoleting terms affected by skos:prefLabel import from MBAO",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3224"
+}
