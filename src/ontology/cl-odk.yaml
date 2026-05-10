@@ -77,6 +77,7 @@ import_group:
     - <http://purl.obolibrary.org/obo/GOCHE_*>
     - <http://purl.obolibrary.org/obo/CLO_*>
     - <http://www.genenames.org/cgi-bin/gene_symbol_report*>
+    - <http://www.w3.org/2004/02/skos/core#prefLabel*>
   products:
     - id: pr
       make_base: TRUE
@@ -175,4 +176,3 @@ components:
         - 2DFTU_HRA_illustrations.csv
     - filename: wmbo-cl-comp.owl
       source: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/main/wmbo-cl-comp.owl
-
