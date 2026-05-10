@@ -1,0 +1,6 @@
+{
+  "body": "**Problems**\n- In the current claude.md file, the agent is instructed to sign off as @dragon-ai-agent. \n- The agent sometimes adds` AnnotationAssertion(dc:contributor obo:CL_0010000 \"dragon-ai-agent\") ` when updating the textual def of a term which:\n1) fails the QC\n2)In CL, we use `dcterms:contributor` only when creating a new term \n\n\n**Changes**\nUpdate claude.md - ie. \n1) always sign your commits `GitHub Copilot`\n2) Change ` created_by: dragon-ai-agent` to `dc:creator GitHub Copilot` and make it clear only to use this when creating new terms \n\n\n**Another problem**\n- Co-pilot only looks at CL ids in the cl-edit file when generating a new ID (so does not take into account Ids assigned in open PRs) - This has been fixed by Damien's implementation\n\n\n",
+  "comments": [],
+  "title": "Update claude.md instructions for GitHub Copilot",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3267"
+}
