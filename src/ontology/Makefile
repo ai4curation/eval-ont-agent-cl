@@ -410,7 +410,7 @@ $(IMPORTSEED): $(PRESEED) $(TMPDIR)/all_pattern_terms.txt | $(TMPDIR)
 
 T_IMPORTSEED = --term-file $(IMPORTSEED)
 
-ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 oboInOwl:is_metadata_tag OMO:0002000 
+ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 oboInOwl:is_metadata_tag OMO:0002000 skos:prefLabel 
 
 # ----------------------------------------
 # Import modules
