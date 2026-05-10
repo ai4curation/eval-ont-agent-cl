@@ -64,6 +64,7 @@ import_group:
     - IAO:0000115
     - oboInOwl:is_metadata_tag
     - OMO:0002000
+    - skos:prefLabel
   exclude_iri_patterns:
     - <http://www.informatics.jax.org/marker/MGI:*>
     - <http://purl.obolibrary.org/obo/OBA_*>
