@@ -1,0 +1,52 @@
+{
+  "body": "Please check that the term does not already exist by using the ontology search tool OLS:\nhttps://www.ebi.ac.uk/ols4/ontologies/cl\n\n\n**Preferred term label**\ntransitional principal-intercalated cell of kidney collecting duct\n\n**Synonyms** (add reference(s), please)\ntPC-IC cell - related synonym - abbreviation - PMID: 37468583\nhybrid principal-intercalated cell - broad synonym - PMID: [33893305](https://pubmed.ncbi.nlm.nih.gov/33893305/)\n\n**Definition** (free text, with reference(s), please. PubMed ID format is PMID: XXXXXX)\nA transitional cell located in the renal collecting duct that co-expresses markers of both principal cell (PC) and intercalated cell (IC). This hybrid cell is enriched in Chronic Kidney Disease (CKD).\n\nPMID: 37468583\nPMID: [33893305](https://pubmed.ncbi.nlm.nih.gov/33893305/)\n\n**Parent cell type term** (check the hierarchy here https://www.ebi.ac.uk/ols4/ontologies/cl)\n[CL_1000454](http://purl.obolibrary.org/obo/CL_1000454) kidney collecting duct epithelial cell \n\n**Anatomical structure where the cell type is found** (check Uberon for anatomical structures: https://www.ebi.ac.uk/ols4/ontologies/uberon)\n[UBERON_0001232](http://purl.obolibrary.org/obo/UBERON_0001232) collecting duct of renal tubule\n\n\n**Your ORCID**\nhttps://orcid.org/0000-0002-2999-0103\nhttps://orcid.org/0009-0000-8480-9277\n\n**Additional notes or concerns**\nThe term is needed to annotate HuBMap data. The definition provided by Dr. Sanjay Jain\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87TIuV-",
+      "author": {
+        "login": "dosumis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Reference mentions \"transitioning principal and intercalated cells.\" in main text,  need more detail. (https://www.nature.com/articles/s41586-023-05769-3)",
+      "createdAt": "2025-11-17T14:52:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3259#issuecomment-3542279550",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-87TI6yq",
+      "author": {
+        "login": "dosumis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "From CL@WTGC call @Caroline-99 notes that using AMICA against the paper extracts\n\n    \"name\": \"tPC-IC\",\n    \"full_name\": \"transitioning principal and intercalated cells\",\n    \"tissue_context\": \"medullary region of acute tubular necrosis\"\n\n\n\"medullary region of acute tubular necrosis\"  text links to Extended Figure 7a which has the tPC-IC annotation.\n\n",
+      "createdAt": "2025-11-17T15:01:49Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3259#issuecomment-3542330538",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-87TKBdh",
+      "author": {
+        "login": "dosumis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Used Claude to check supplementary material\n\n=> \n\n> The full name of tPC-IC is \"Transitional Principal-Intercalated Cell\".\n\n> This was found in Supplementary Table 4, where it describes a specific type of kidney cell that transitions between Principal Cells (PC) and Intercalated Cells (IC) in the collecting tubules. These cells have mixed identity characteristics and are enriched in Chronic Kidney Disease (CKD).\n\nGiven this, I think fine to add the term using this reference as supporting citation.",
+      "createdAt": "2025-11-17T15:57:07Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3259#issuecomment-3542620001",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[NTR] tPC-IC cell",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3259"
+}
