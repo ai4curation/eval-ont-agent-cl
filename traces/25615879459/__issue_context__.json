@@ -1,0 +1,29 @@
+{
+  "body": "After the first session of the Human Retina Cell Atlas and RGC hackaton, there are some edits to implement into CL.\n\n- [x] #3176\n- [ ] #3177\n    There are many cases with details of synaptic IO and morphology (mono vs bis-stratified) that are not reflected in formal axioms.  A more complete representation might help with reconciliation.\n- [ ] #3179\nMain focus = mouse where we have two nomenclatures + more in the literature.\n- [x] #3178\n  starting with the classes that are populated (midget ON & OFF and parasol ON & OFF)\n\n\nSee General discussion document here https://docs.google.com/document/d/1WVy8AiGKmOeUoz10Sr1uXtkbHCSNuze0WFZtbQrcmYY/edit?tab=t.0. - also this comment: https://github.com/obophenotype/cell-ontology/issues/2217#issuecomment-2640028545",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-86WO-dd",
+      "author": {
+        "login": "dosumis"
+      },
+      "authorAssociation": "CONTRIBUTOR",
+      "body": "Made some edits to list of tasks.",
+      "createdAt": "2024-12-05T14:40:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/2844#issuecomment-2520508253",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[EPIC] Retinal Ganglion Cells refactoring",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/2844"
+}
