@@ -1,0 +1,23 @@
+{
+  "run_id": 25688740256,
+  "repo": "ai4curation/eval-ont-agent-cl",
+  "workflow": "Evaluate an agent on an issue",
+  "inputs": {
+    "issue_repo": "obophenotype/cell-ontology",
+    "issue_number": "3453",
+    "pr_number": "3556",
+    "model": "togetherai/google/gemma-4-31B-it",
+    "agent_config_repo": "ai4curation/cl-agent-config",
+    "agent_config_tag": "v3",
+    "agent_config_directory": ".",
+    "iter_num": "1",
+    "repo_url_prefix": "https://href.li/?",
+    "create_pr": "true",
+    "force_new_branch": "false"
+  },
+  "branch": "scribe-v1-ai4curation-cl-agent-config-v3-.-togetherai-google-gemma-4-31B-it-iter1-issue-3453",
+  "created_pr_number": "112",
+  "created_pr_url": "https://github.com/ai4curation/eval-ont-agent-cl/pull/112",
+  "original_issue_url": "https://github.com/obophenotype/cell-ontology/issues/3453",
+  "original_pr_url": "https://github.com/obophenotype/cell-ontology/pull/3556"
+}
