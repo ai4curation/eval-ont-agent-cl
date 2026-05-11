@@ -1,0 +1,6 @@
+{
+  "body": "Most `oboInOwl:*` properties have a label that is defined in the merged import module. Therefore, there is _no_ need to relabel them in the `-edit` file.\n\nIn fact, relabelling those properties in the `-edit` file is a regular source of spurious diffs, because some of those properties (especially `hasDbXref`) have _several_ conflicting labels in the import module, and we can’t control which label is being used in the serialisation of the `cl-edit.owl` file.\n\nI had already removed the relabelling of those properties _twice_: In #3333, and then again in #3547. Now the spurious labels have been injected again in #3522.\n\nThey must be removed once more, and we must have a check to prevent them from being ever injected again.",
+  "comments": [],
+  "title": "Prevent contributors from relabelling imported annotation properties",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3588"
+}
