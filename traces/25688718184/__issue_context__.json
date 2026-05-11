@@ -1,0 +1,22 @@
+{
+  "body": "- Link to reference data on https://celltype.info/project/544/dataset/1157\n    - SeeAlso:  https://celltype.info/project/544/dataset/1157 @rdfs:label \"reference transcriptomic data on Cell Annotation Platform\"\n    - Extend definition text with details of location of reference trancriptomic data (standard pattern)\n- NS-Forest markers here https://github.com/Cellular-Semantics/CellMark/pull/56\n   - PR needs fixing - @ubyndr  to help with this bit\n   - Add CL mappings => Automated inclusion in CL.",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87vxwX_",
+      "author": {
+        "login": "RiveraAndrea83"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "database_cross_reference: https://celltype.info/project/544/dataset/1157\nrdfs:label reference transcriptomic data on Cell Annotation Platform.\n\nTerms\nCL_4033034\nCL_0000751\nCL_4033033\nCL_4033028\nCL_0000748\nCL_4033031\nCL_4033029\nCL_4033027\nCL_4033035\nCL_4033030\nCL_4033032\nCL_4033036\nCL_4033019\n\n",
+      "createdAt": "2026-03-09T10:38:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3521#issuecomment-4022797823",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Add reference dataset and NS-Forest marker for human bipolar neuron types",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3521"
+}
