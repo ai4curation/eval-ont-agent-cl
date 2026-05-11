@@ -1,0 +1,37 @@
+{
+  "body": "Currently, CL’s `-edit` file contains some `rdfs:label` annotations for several imported annotation properties (APs) that _already_ have a label annotation (or sometimes even _several_ label annotations) from the import modules.\n\nFor example:\n\n```\n# Annotation Property: obo:IAO_0000115 (definition)\n\nAnnotationAssertion(rdfs:label obo:IAO_0000115 \"definition\")\n\n# Annotation Property: obo:IAO_0000424 (expand expression to)\n\nAnnotationAssertion(rdfs:label obo:IAO_0000424 \"expand expression to\")\n\n# Annotation Property: obo:IAO_0000700 (has ontology root term)\n\nAnnotationAssertion(rdfs:label obo:IAO_0000700 \"preferred_root\")\n\n# Annotation Property: obo:IAO_0100001 (term replaced by)\n\nAnnotationAssertion(rdfs:label obo:IAO_0100001 \"term replaced by\")\n\n# Annotation Property: oboInOwl:hasBroadSynonym (has_broad_synonym)\n\nAnnotationAssertion(rdfs:label oboInOwl:hasBroadSynonym \"has_broad_synonym\")\n\n# Annotation Property: oboInOwl:hasDbXref (has cross-reference)\n\nAnnotationAssertion(rdfs:label oboInOwl:hasDbXref \"database_cross_reference\")\n\n# Annotation Property: oboInOwl:hasExactSynonym (has exact synonym)\n\nAnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym \"has_exact_synonym\")\n```\n\nNot only are those annotations useless (since they are redundant with the _imported_ annotations), they are a frequent cause of spurious diffs, because the name of the annotation (as it appears in the comment immediately before the annotation assertion axiom) will frequently change (for not completely clear reasons, at least to me).\n\nIs there any profound reason why those redundant label annotations still exist in the -edit file? In my opinion, they have nothing to do here (CL has no business stating what the label of, say, `IAO:0000115` should be), and I’d like to propose to remove them all.",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87EpaPQ",
+      "author": {
+        "login": "gouttegd"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@matentzn ⬆️ An opinion on that?",
+      "createdAt": "2025-09-16T15:03:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3332#issuecomment-3299189712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-87EqX_P",
+      "author": {
+        "login": "matentzn"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Yes, my opinion is that you are totally right in your assessment.",
+      "createdAt": "2025-09-16T16:07:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3332#issuecomment-3299442639",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Re-labelling of imported annotation properties in the -edit file",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3332"
+}
