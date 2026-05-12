@@ -1,0 +1,40 @@
+pattern_name: squamousEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/squamousEpithelialCell
+
+description: An epithelial cell characterized by a broad, flat morphology. Squamous epithelial cells are typically found lining body surfaces subject to stretching and abrasion.
+
+contributors:
+  - https://orcid.org/0000-0001-5208-3432
+
+classes:
+  epithelial cell: "CL:0000066"
+  flattened: "PATO:0002254"
+
+relations:
+  has characteristic: "RO:0000053"
+
+vars:
+  location: "'location'"
+
+name:
+  text: "%s squamous epithelial cell"
+  vars:
+    - location
+
+def:
+  text: "A squamous epithelial cell that is located in the %s."
+  vars:
+    - location
+
+annotationProperties:
+  related_synonym: "oio:hasRelatedSynonym"
+
+annotations:
+  - annotationProperty: related_synonym
+    text: "%s squamous cell"
+    vars:
+      - location
+
+equivalentTo:
+  text: "'epithelial cell' and ('has characteristic' some 'flattened')"
+  vars: []
