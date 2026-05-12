@@ -215,11 +215,27 @@ For example:
 The ontology [<u>PATO</u>](https://www.ebi.ac.uk/ols4/ontologies/pato),
 has a rich set of terms that can be used to record the general
 characteristics of cells, such as their morphology. These are recorded
-using [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053).
+using [**’has characteristic’**](http://purl.obolibrary.org/obo/RO_0000053).
 
 In choosing PATO terms, avoid those referring to some change in
 characteristic (e.g,.’ increased branchiness’). The following list of
 examples is not exhaustive:
+
+### Recording cell shape morphology
+
+PATO has a set of terms for recording epithelial cell shape characteristics:
+
+For example, [squamous epithelial cell](http://purl.obolibrary.org/obo/CL_0000076)
+is defined equivalently as:
+[‘epithelial cell’](http://purl.obolibrary.org/obo/CL_0000066) *and* [**’has characteristic’**](http://purl.obolibrary.org/obo/RO_0000053)
+*some* [flattened](http://purl.obolibrary.org/obo/PATO_0002254)
+
+Similarly, [cuboidal epithelial cell](http://purl.obolibrary.org/obo/CL_9900001)
+is defined equivalently as:
+[‘epithelial cell’](http://purl.obolibrary.org/obo/CL_0000066) *and* [**’has characteristic’**](http://purl.obolibrary.org/obo/RO_0000053)
+*some* [cuboid](http://purl.obolibrary.org/obo/PATO_0001872)
+
+Other cells with specific shape characteristics should be annotated with appropriate PATO shape terms when they are named after or characterized by their morphology.
 
 ### Recording Morphology
 
@@ -227,7 +243,7 @@ PATO has a set of general morphology terms which may be applicable to
 cells.
 
 For example, [erythrocyte](http://purl.obolibrary.org/obo/CL_0000765)
-subClassOf [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053)
+subClassOf [**’has characteristic’**](http://purl.obolibrary.org/obo/RO_0000053)
 *some* [biconcave](http://purl.obolibrary.org/obo/PATO_0002039)
 
 PATO also has a set of terms for [<u>specific cell morphologies</u>](https://www.ebi.ac.uk/ols4/ontologies/pato) (mostly
