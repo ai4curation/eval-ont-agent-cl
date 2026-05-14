@@ -1,0 +1,30 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+# This check prevents relabeling of imported annotation properties.
+# These properties already have labels defined in the import module,
+# and relabeling them in cl-edit.owl causes spurious diffs.
+# See: https://github.com/obophenotype/cell-ontology/issues/3588
+
+SELECT DISTINCT ?property ?label WHERE {
+  ?property rdfs:label ?label .
+  FILTER (?property IN (
+    oboInOwl:SubsetProperty,
+    oboInOwl:SynonymTypeProperty,
+    oboInOwl:consider,
+    oboInOwl:hasBroadSynonym,
+    oboInOwl:hasDbXref,
+    oboInOwl:hasExactSynonym,
+    oboInOwl:hasNarrowSynonym,
+    oboInOwl:hasRelatedSynonym,
+    oboInOwl:hasSynonymType,
+    oboInOwl:inSubset,
+    oboInOwl:hasAlternativeId,
+    oboInOwl:hasOBONamespace,
+    oboInOwl:id,
+    oboInOwl:creation_date,
+    oboInOwl:is_inferred,
+    oboInOwl:shorthand
+  ))
+}
+ORDER BY ?property
