@@ -1,0 +1,15 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+# Catch labels (rdfs:label) being injected in the -edit file on annotation
+# properties from the oboInOwl namespace, which are already labelled in the
+# merged import module.
+# Re-labelling them in -edit produces spurious diffs because some of those
+# properties (notably oboInOwl:hasDbXref) have several conflicting labels in
+# the import module, and we can't control which label is used when -edit is
+# serialised. See https://github.com/obophenotype/cell-ontology/issues/3588.
+
+SELECT DISTINCT ?property ?label WHERE {
+  ?property rdfs:label ?label .
+  FILTER (STRSTARTS(STR(?property), "http://www.geneontology.org/formats/oboInOwl#"))
+}
