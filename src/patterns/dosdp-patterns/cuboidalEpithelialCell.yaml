@@ -1,0 +1,32 @@
+pattern_name: cuboidalEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/cuboidalEpithelialCell
+
+description: "A cuboidal epithelial cell type. A cuboidal epithelial cell is defined as an epithelial cell with a cuboid (PATO:0001872) morphology, i.e. approximately as tall as it is wide. Use this pattern to describe sub-types of cuboidal epithelial cell (e.g. a cuboidal epithelial cell that is part of a specific anatomical structure)."
+
+contributors:
+  - https://orcid.org/0000-0001-5208-3432
+
+classes:
+  cuboidal epithelial cell: "CL:9900001"
+  anatomical entity: "UBERON:0001062"
+
+relations:
+  part of: "BFO:0000050"
+
+vars:
+  location: "'anatomical entity'"
+
+name:
+  text: "cuboidal epithelial cell of %s"
+  vars:
+    - location
+
+def:
+  text: "A cuboidal epithelial cell that is part of a %s."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'cuboidal epithelial cell' and ('part of' some %s)"
+  vars:
+    - location

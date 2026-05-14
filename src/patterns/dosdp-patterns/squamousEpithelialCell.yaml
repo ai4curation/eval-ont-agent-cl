@@ -1,0 +1,32 @@
+pattern_name: squamousEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/squamousEpithelialCell
+
+description: "A squamous epithelial cell type. A squamous epithelial cell is defined as an epithelial cell with a flattened (PATO:0002254) morphology. Use this pattern to describe sub-types of squamous epithelial cell (e.g. a squamous epithelial cell that is part of a specific anatomical structure)."
+
+contributors:
+  - https://orcid.org/0000-0001-5208-3432
+
+classes:
+  squamous epithelial cell: "CL:0000076"
+  anatomical entity: "UBERON:0001062"
+
+relations:
+  part of: "BFO:0000050"
+
+vars:
+  location: "'anatomical entity'"
+
+name:
+  text: "squamous epithelial cell of %s"
+  vars:
+    - location
+
+def:
+  text: "A squamous epithelial cell that is part of a %s."
+  vars:
+    - location
+
+equivalentTo:
+  text: "'squamous epithelial cell' and ('part of' some %s)"
+  vars:
+    - location
