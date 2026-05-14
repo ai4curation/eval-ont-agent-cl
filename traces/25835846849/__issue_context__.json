@@ -1,0 +1,22 @@
+{
+  "body": "https://en.wikipedia.org/wiki/Hyaluronic_acid#Fasciacyte",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87qjhNu",
+      "author": {
+        "login": "RiveraAndrea83"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@copilot please add this new CL term using the following information\n\ndefinition: A a mesenchymal stromal cell of the deep fascia (e.g., fascia lata) that is vimentin‑positive, CD68‑negative, and S‑100A4‑positive, organized in small clusters at the interface between fibrous fascial sublayers and loose connective tissue. It is specialized for hyaluronan‑rich ECM biosynthesis, as evidenced by HAS2 mRNA expression, Alcian Blue staining, and anti‑HABP immunoreactivity, and functions to regulate fascial gliding and viscoelasticity.\n\nReferences:\nPMID:29575206\nPMID:33573365\n\nParent term: http://purl.obolibrary.org/obo/CL_0000499\n\norcid: 0000-0002-5507-2103\n\n\n\n\n\n",
+      "createdAt": "2026-02-20T14:26:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3497#issuecomment-3935179630",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[NTR] Fasciacyte",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3497"
+}
