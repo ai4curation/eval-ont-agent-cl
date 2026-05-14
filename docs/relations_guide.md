@@ -235,6 +235,42 @@ neuronal), e.g.
 
 ‘Betz cell’ subClassOf ‘has characteristic’ some ‘standard pyramidal morphology’
 
+#### Epithelial cell shape (squamous, cuboidal, columnar)
+
+Epithelial cell types are commonly classified by the general shape of the
+individual cell. Use [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053)
+together with the appropriate PATO shape term to record this. The two main
+patterns currently in use are:
+
+- **Squamous** (flattened) cells use [**flattened**](http://purl.obolibrary.org/obo/PATO_0002254).
+
+  For example, ['squamous epithelial cell'](http://purl.obolibrary.org/obo/CL_0000076)
+  EquivalentTo: ['epithelial cell'](http://purl.obolibrary.org/obo/CL_0000066) *and*
+  [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053) *some*
+  [flattened](http://purl.obolibrary.org/obo/PATO_0002254).
+
+- **Cuboidal** cells use [**cuboid**](http://purl.obolibrary.org/obo/PATO_0001872)
+  (synonym: cuboidal).
+
+  For example, ['cuboidal epithelial cell'](http://purl.obolibrary.org/obo/CL_9900001)
+  EquivalentTo: ['epithelial cell'](http://purl.obolibrary.org/obo/CL_0000066) *and*
+  [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053) *some*
+  [cuboid](http://purl.obolibrary.org/obo/PATO_0001872).
+
+Any epithelial cell type whose name or definition states that it is squamous
+or cuboidal in shape should bear the corresponding `has characteristic` axiom
+(directly, or by being a subclass of `squamous epithelial cell` or
+`cuboidal epithelial cell`). Cell types whose shape is variable or
+context-dependent (e.g. cells described as "squamous to cuboidal" depending on
+state) should not be axiomatised in this way. Note also that
+['columnar/cuboidal epithelial cell'](http://purl.obolibrary.org/obo/CL_0000075)
+is an inclusive parent for cell types that may be either columnar or cuboidal
+and is not itself logically equivalent to `cuboidal epithelial cell`.
+
+DOSDP patterns for generating subtypes of squamous and cuboidal epithelial
+cells live in `src/patterns/dosdp-patterns/squamousEpithelialCell.yaml` and
+`src/patterns/dosdp-patterns/cuboidalEpithelialCell.yaml`.
+
 ### Recording nuclear number 
 
 To record the number of nuclei in a cell, use a PATO subclass
