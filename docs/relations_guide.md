@@ -235,6 +235,18 @@ neuronal), e.g.
 
 ‘Betz cell’ subClassOf ‘has characteristic’ some ‘standard pyramidal morphology’
 
+#### Cell shape characteristics
+
+For epithelial cells and other cell types, PATO terms can be used to record cell shape characteristics:
+
+**Flattened/Squamous cells**: Use [flattened](http://purl.obolibrary.org/obo/PATO_0002254) (PATO:0002254) to describe cells with a squamous (flattened) morphology.
+
+For example, [squamous epithelial cell](http://purl.obolibrary.org/obo/CL_0000076) is defined as:
+
+EquivalentTo: [epithelial cell](http://purl.obolibrary.org/obo/CL_0000066) *and* [**’has characteristic’**](http://purl.obolibrary.org/obo/RO_0000053) *some* [flattened](http://purl.obolibrary.org/obo/PATO_0002254)
+
+**Note**: At the time of writing (May 2026), PATO does not yet have a term for "cuboidal" cell shape. When such a term becomes available, it should be used analogously to describe cuboidal epithelial cells.
+
 ### Recording nuclear number 
 
 To record the number of nuclei in a cell, use a PATO subclass

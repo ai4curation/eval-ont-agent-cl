@@ -1,0 +1,42 @@
+pattern_name: cuboidalEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/cuboidalEpithelialCell
+
+description: An epithelial cell with a cuboidal (cube-shaped) morphology. This pattern is currently incomplete as PATO does not yet have a term for "cuboidal" shape. Once a suitable PATO term is added, this pattern should use has_characteristic (bearer of) relationship to define cuboidal cells.
+
+# NOTE: This pattern is a placeholder. PATO does not currently (as of May 2026) have a term for "cuboidal" shape.
+# When such a term is added to PATO, update this pattern with the appropriate PATO ID.
+
+contributors:
+  - https://github.com/anthropics/claude-code
+
+classes:
+  epithelial cell: "CL:0000066"
+  # cuboidal: "PATO:XXXXXXX"  # TO BE ADDED when PATO term is created
+
+relations:
+  bearer of: "RO:0000053"
+
+vars:
+  epithelial_cell_type: "'epithelial cell'"
+
+name:
+  text: "cuboidal %s"
+  vars:
+    - epithelial_cell_type
+
+def:
+  text: "An %s that has a cuboidal morphology."
+  vars:
+    - epithelial_cell_type
+
+# Uncomment when PATO term for cuboidal is available:
+# equivalentTo:
+#   text: "%s and ('bearer of' some 'cuboidal')"
+#   vars:
+#     - epithelial_cell_type
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "cube-shaped %s"
+    vars:
+      - epithelial_cell_type

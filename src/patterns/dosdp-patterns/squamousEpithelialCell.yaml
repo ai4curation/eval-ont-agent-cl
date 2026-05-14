@@ -1,0 +1,38 @@
+pattern_name: squamousEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/squamousEpithelialCell
+
+description: An epithelial cell with a flattened (squamous) morphology. This pattern uses has_characteristic (bearer of) relationship with PATO:0002254 (flattened) to define squamous cells.
+
+contributors:
+  - https://github.com/anthropics/claude-code
+
+classes:
+  epithelial cell: "CL:0000066"
+  flattened: "PATO:0002254"
+
+relations:
+  bearer of: "RO:0000053"
+
+vars:
+  epithelial_cell_type: "'epithelial cell'"
+
+name:
+  text: "squamous %s"
+  vars:
+    - epithelial_cell_type
+
+def:
+  text: "An %s that has a flattened morphology."
+  vars:
+    - epithelial_cell_type
+
+equivalentTo:
+  text: "%s and ('bearer of' some 'flattened')"
+  vars:
+    - epithelial_cell_type
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "flattened %s"
+    vars:
+      - epithelial_cell_type
