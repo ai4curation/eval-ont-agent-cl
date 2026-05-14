@@ -1,0 +1,102 @@
+## Summary
+
+This PR adds 14 new cell type terms to the Cell Ontology for myenteric plexus neurons, supporting HubMap annotation requirements as specified in issue #3584.
+
+## New Terms Added
+
+### Prerequisite Term
+- **CL_9900000** (dogiel type II neuron) - General morphological class, parent of the myenteric-specific Dogiel type II neuron
+
+### Primary Functional Classes
+- **CL_9900001** (intrinsic primary afferent neuron of myenteric plexus) - Sensory neurons (IPANs) with Dogiel type II morphology
+- **CL_9900002** (interneuron of myenteric plexus) - Interneurons integrating sensory and motor signals
+- **CL_9900003** (secretomotor/vasodilator neuron of myenteric plexus) - Neurons controlling secretion and blood flow
+- **CL_9900004** (intestinofugal neuron) - Neurons projecting to prevertebral sympathetic ganglia
+
+### Interneuron Subtypes
+- **CL_9900005** (ascending interneuron of myenteric plexus) - ChAT+/ENK+ excitatory interneurons
+- **CL_9900006** (descending interneuron of myenteric plexus) - Inhibitory interneurons (5-HT+, NOS1+)
+
+### Motor Neuron Subtypes (Dogiel Type I)
+- **CL_9900007** (stubby dogiel type I neuron of myenteric plexus) - ChAT+/NOS1- excitatory motor neurons
+- **CL_9900008** (spiny dogiel type I neuron of myenteric plexus) - NOS1+/ChAT- inhibitory motor neurons
+
+### Sensory Neuron Subtypes
+- **CL_9900009** (dogiel type II neuron of myenteric plexus) - Myenteric-specific Dogiel type II neurons
+- **CL_9900010** (calretinin-positive intrinsic primary afferent neuron of myenteric plexus) - Calretinin+ IPANs (SN1)
+- **CL_9900011** (calretinin-negative intrinsic primary afferent neuron of myenteric plexus) - Calretinin- IPANs (SN2)
+
+### Defined Grouping Classes
+- **CL_9900012** (cholinergic neuron of myenteric plexus) - EquivalentClasses axiom for automatic classification
+- **CL_9900013** (nitrergic neuron of myenteric plexus) - EquivalentClasses axiom for automatic classification
+
+## Implementation Details
+
+✅ **Class Hierarchy**
+- All terms properly integrated into existing CL hierarchy
+- Correct parent classes: CL_0000540 (neuron), CL_0007011 (enteric neuron), CL_0000099 (interneuron), CL_0000101 (sensory neuron), CL_0000100 (motor neuron), CL_0008015 (inhibitory motor neuron), CL_4047038 (dogiel type I neuron)
+
+✅ **Logical Definitions**
+- Terms 12 and 13 use EquivalentClasses axioms with genus-differentia pattern
+- Pattern: enteric neuron AND (has soma location) myenteric plexus AND (capable of) specific process
+- Enables automatic classification by reasoner
+
+✅ **Anatomical Annotations**
+- All myenteric terms annotated with: `ObjectSomeValuesFrom(obo:RO_0002100 obo:UBERON_0002439)` (has soma location: myenteric nerve plexus)
+- Consistent with ontology patterns for location-specific cell types
+
+✅ **Definitions and References**
+- All definitions cite PMIDs as specified: 34170401, 37355216, 40954253, 38292899, 32888429
+- Definitions follow genus-differentia form and mirror logical axioms where applicable
+- Species-specific information included where relevant (e.g., human vs. mouse differences for secretomotor neurons)
+
+✅ **Synonyms**
+- All synonyms properly annotated with hasExactSynonym or hasRelatedSynonym
+- PMID references included for each synonym
+- Common abbreviations included (IPAN, VFN, PSVN, SN1, SN2, etc.)
+
+✅ **Metadata**
+- All terms include:
+  - `terms:date`: 2026-05-14T00:00:00Z
+  - `terms:creator`: "GitHub Copilot"
+  - `obo:IAO_0000233`: Link to issue #3584
+  
+✅ **ID Assignment**
+- Used temporary ID range (CL_9900000-CL_9900013) as specified in idrange:81
+- Sequential assignment for maintainability
+
+## Validation
+
+- ✅ Functional syntax verified (one axiom per line)
+- ✅ All parent terms exist in ontology
+- ✅ UBERON term verified (UBERON:0002439 - myenteric nerve plexus)
+- ✅ GO term verified (GO:0014055 - acetylcholine secretion, neurotransmission)
+- ✅ Relation properties verified (RO:0002100 - has soma location, RO:0002215 - capable of)
+- ✅ File structure maintained (declarations added in sequence, class axioms added before obsolete terms)
+
+## Testing Recommendations
+
+1. Run reasoner to verify:
+   - Defined classes (CL_9900012, CL_9900013) correctly classify their members
+   - No unsatisfiable classes
+   - Correct inferred hierarchy
+
+2. Verify that all references are accessible:
+   - PMID:34170401, PMID:37355216, PMID:40954253, PMID:38292899, PMID:32888429
+
+3. Check for consistency with existing enteric neuron terms
+
+## Notes
+
+- GO:0006809 (nitric oxide biosynthetic process) used for nitrergic neuron definition per the issue specification
+- Two levels of Dogiel type II neurons created as requested: general (CL_9900000) and myenteric-specific (CL_9900009)
+- Hierarchy structured to support both morphological (Dogiel type) and functional (sensory/motor/interneuron) classification
+- The defined classes enable automatic classification based on molecular markers (ChAT expression → cholinergic, NOS1 expression → nitrergic)
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-sonnet-4-5-20250929`
+- Agent config: `ai4curation/cl-agent-config@v3:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-cl/actions/runs/25877743427)
