@@ -1,0 +1,6 @@
+{
+  "body": "## New term\n\ncuboidal epithelial cell equivalent_to epithelial cell and has_characteristic some cuboidal\nSubClassOf: columnar cuboidal epithelial cell\n\n## New logical def\nsquamous epithelial cell equivalent_to epithelial cell and has_characteristic some flattened (PATO:0002254)\n\n## Axiomatization:\n- Find all cell types with squamous in name or stated to be squamous in definition and add 'relationship: has_characteristic some flattened (PATO:0002254)\n- Find all cell types with cuboidal in name or stated to be squamous in definition and add 'relationship: has_characteristic some cuboidal \n\n## Documentation\n- Extend relations_guide section on cell characteristics to include this\n- Add DOSDPs for both patterns under src/patterns\n\n\n",
+  "comments": [],
+  "title": "Fix design patterns for columnar cuboidal and squamous epithelial cells",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3536"
+}

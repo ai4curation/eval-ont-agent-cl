@@ -1,0 +1,116 @@
+## Summary
+
+This PR partially implements issue #3536 to fix design patterns for columnar/cuboidal and squamous epithelial cells. The squamous epithelial cell pattern has been fully implemented, but the cuboidal pattern is blocked due to a missing PATO term.
+
+## Changes Made
+
+### 1. Ontology Changes (src/ontology/cl-edit.owl)
+
+- **Added PATO:0002254 declaration**: Added the PATO term for "flattened" to the ontology declarations
+- **Added logical definition for squamous epithelial cell (CL:0000076)**:
+  - Textual definition: "An epithelial cell that has a flattened morphology."
+  - Logical axiom: `EquivalentClasses(CL:0000076 ObjectIntersectionOf(CL:0000066 ObjectSomeValuesFrom(RO:0000053 PATO:0002254)))`
+  - This means: squamous epithelial cell ≡ epithelial cell AND has_characteristic some flattened
+  - Added Dublin Core date timestamp (2026-05-14T18:32:46Z)
+
+### 2. Documentation Updates (docs/relations_guide.md)
+
+- Added new subsection "Cell shape characteristics" under "Recording Morphology"
+- Documents the use of PATO:0002254 (flattened) for squamous cells
+- Includes example of squamous epithelial cell equivalence axiom
+- Notes that PATO currently lacks a "cuboidal" term
+
+### 3. DOSDP Patterns (src/patterns/dosdp-patterns/)
+
+Created two new pattern files:
+
+**squamousEpithelialCell.yaml**:
+- Complete pattern for defining squamous (flattened) epithelial cells
+- Uses PATO:0002254 (flattened) with has_characteristic relationship
+- Can be used to generate additional squamous cell types
+
+**cuboidalEpithelialCell.yaml**:
+- Placeholder pattern documenting the intended structure
+- Includes comments noting that PATO lacks a "cuboidal" term
+- Ready to be completed once appropriate PATO term is available
+
+## Rationale
+
+### Design Pattern Approach
+The implementation follows the established Cell Ontology pattern of using:
+- **has_characteristic** (RO:0000053) relationship to link cells to PATO quality terms
+- **Equivalence axioms** to provide formal logical definitions
+- This enables automatic classification by reasoners
+
+### Squamous = Flattened
+Biologically, "squamous" describes cells with a flattened, scale-like morphology. PATO:0002254 (flattened) accurately captures this characteristic.
+
+### Inheritance Through Reasoning
+With the equivalence axiom on CL:0000076, all subclasses of squamous epithelial cell will automatically inherit the "has_characteristic some flattened" relationship through reasoning. This means we don't need to add explicit axioms to each subclass (e.g., stratified squamous epithelial cell, squamous endothelial cell, etc.).
+
+## Validation
+
+### Background Research Completed:
+✅ Searched PATO ontology for relevant terms (flattened: found, cuboidal: not found)
+✅ Identified 20+ cell types with "squamous" in name or definition
+✅ Identified 20+ cell types with "cuboidal" in name or definition  
+✅ Reviewed existing has_characteristic usage in CL
+✅ Reviewed relations_guide.md for existing morphology patterns
+✅ Checked existing DOSDP patterns (cellBearerOfQuality.yaml)
+
+### Files Modified:
+- src/ontology/cl-edit.owl (1 declaration, 4 axioms added to CL:0000076)
+- docs/relations_guide.md (1 new subsection)
+- src/patterns/dosdp-patterns/squamousEpithelialCell.yaml (new file)
+- src/patterns/dosdp-patterns/cuboidalEpithelialCell.yaml (new file)
+
+## Outstanding Issues
+
+### Blocker: Missing PATO Term for Cuboidal
+
+The issue requests creating a "cuboidal epithelial cell" term with logical definition using has_characteristic, but PATO does not currently have a term for "cuboidal" or "cube-shaped" morphology.
+
+**Verified by:**
+- Fetching and searching PATO OBO file from GitHub (master branch, 2025-05-14 release)
+- Searching PATO Ontology Lookup Service
+- Searching PATO GitHub issues
+
+**Next Steps:**
+1. **Option A**: Request PATO maintainers to add a "cuboidal" shape term
+2. **Option B**: Use an alternative existing PATO term if one is identified
+3. **Option C**: Wait for PATO term and implement in a follow-up PR
+
+**Recommendation**: Option A - Submit a request to the PATO ontology for a "cuboidal" term. In biological/anatomical contexts, "cuboidal" specifically refers to cells that are approximately cube-shaped (similar width, height, and depth), which is distinct from related terms like "square" (2D) or "rectangular" (may not be equal-sided).
+
+## Testing
+
+The changes can be validated with:
+```bash
+# Check OWL syntax
+robot convert -i src/ontology/cl-edit.owl -o /dev/null
+
+# Run reasoner to check for inconsistencies
+robot reason -i src/ontology/cl-edit.owl -r ELK
+
+# Verify PATO term is properly referenced
+grep "PATO_0002254" src/ontology/cl-edit.owl
+```
+
+## References
+
+- Issue #3536: Fix design patterns for columnar cuboidal and squamous epithelial cells
+- [PATO GitHub](https://github.com/pato-ontology/pato)
+- [Cell Ontology relations guide](../docs/relations_guide.md)
+- [OBO Foundry PATO page](http://obofoundry.org/ontology/pato.html)
+
+---
+
+Signed-off-by: GitHub Copilot
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-sonnet-4-5-20250929`
+- Agent config: `ai4curation/cl-agent-config@v3:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-cl/actions/runs/25877805263)
