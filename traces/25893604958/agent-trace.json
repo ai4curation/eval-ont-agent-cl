@@ -1,0 +1,146 @@
+I'll help you address issue #3523. Let me start by reading the issue context to understand what needs to be done.
+
+● Read __issue_context__.json
+  └ 6 lines read
+
+Now let me examine the current term in the ontology to see what needs to be updated.
+
+● Find CL_0004117 in the ontology (shell)
+  │ grep -i "CL_0004117" src/ontology/cl-edit.owl | head -20
+  └ 21 lines...
+
+Now let me fetch the full text of the PMIDs mentioned to better understand the term and validate the definitions:
+
+● Fetch full text for PMID:28753612 (shell)
+  │ aurelian fulltext PMID:28753612
+  └ 2 lines...
+
+Let me check if there are any related issues or PMIDs to consult:
+
+● View issue details from GitHub (shell)
+  │ gh issue view 3523 --json title,body,comments
+  └ 2 lines...
+
+Based on the issue context, I need to:
+1. Update the label from "retinal ganglion cell A" to "alpha retinal ganglion cell"
+2. Update the textual definition with a more comprehensive one
+3. Add the exact synonym "Retinal ganglion cell A" (with citation PMID:12209831)
+4. Update the definition citation to PMID:28753612
+
+Let me create a plan and then make the changes:
+
+● Create plan.md +30
+  └ ~/.copilot/session-state/65e69bd5-a2f3-48c3-bf78-ebf0350af5f6/plan.md
+
+Now let me make the necessary edits to the ontology file:
+
+● Edit cl-edit.owl +1 -1
+  └ src/ontology/cl-edit.owl
+
+● Edit cl-edit.owl +1 -1
+  └ src/ontology/cl-edit.owl
+
+● Edit cl-edit.owl +1
+  └ src/ontology/cl-edit.owl
+
+Now let me add the term tracker item to link back to the issue and verify my changes:
+
+● Verify changes to CL_0004117 (shell)
+  │ grep -A 20 "# Class: obo:CL_0004117" src/ontology/cl-edit.owl | head -25
+  └ 22 lines...
+
+Good! Now I need to add a term tracker item to link back to issue #3523. Let me find where to insert it:
+
+● Edit cl-edit.owl +1
+  └ src/ontology/cl-edit.owl
+
+Now let me verify the final state of the term:
+
+● Verify final state (shell)
+  │ grep -A 20 "# Class: obo:CL_0004117" src/ontology/cl-edit.owl | head -25
+  └ 22 lines...
+
+Perfect! Now let me validate the ontology file using ROBOT to ensure there are no syntax errors:
+
+● Validate syntax with ROBOT convert (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && robot convert -i
+  │ src/ontology/cl-edit.owl -o /tmp/test-convert.owl 2>&1 | head -50
+  └ 2 lines...
+
+Let me check if there's a Make target or script for validation:
+
+● Check ontology directory structure (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && ls -la
+  │ src/ontology/ | head -20
+  └ 21 lines...
+
+Let me check the Makefile for validation targets:
+
+● Find validation targets in Makefile (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl/src/ontology &&
+  │ grep -i "^test\|^validate\|^check" Makefile | head -10
+  └ 11 lines...
+
+Let me do a basic syntax check by looking at the file structure around my changes:
+
+● View complete CL_0004117 term block (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && grep -B 2 -A 15
+  │ "^# Class: obo:CL_0004117" src/ontology/cl-edit.owl
+  └ 19 lines...
+
+Perfect! The changes look good. Now let me commit the changes to a branch:
+
+● Create branch for issue 3523 (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git checkout -b
+  │ issue-3523
+  └ 2 lines...
+
+● Stage changes (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git add
+  │ src/ontology/cl-edit.owl
+  └ 1 line...
+
+● Commit changes with detailed message (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git commit -m
+  │ "Update CL_0004117: Rename 'retinal ganglion cell A' to 'alpha retinal
+  │ ganglion cell' with revised definition
+  │
+  │ - Updated label from 'retinal ganglion cell A' to 'alpha retinal ganglion …
+  └ 20 lines...
+
+Great! Now let me create the required ISSUE_COMMENTS.md and PR_COMMENTS.md files:
+
+● Create ISSUE_COMMENTS.md +8
+
+● Create PR_COMMENTS.md +52
+
+Perfect! Let me verify the final state of the repository:
+
+● Check git status (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git status
+  └ 19 lines...
+
+● Verify commit (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git log
+  │ --oneline -1
+  └ 2 lines...
+
+Excellent! Let me verify the changes one more time to ensure everything is correct:
+
+● Show commit details (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git show HEAD
+  │ --stat
+  └ 21 lines...
+
+● Show the diff (shell)
+  │ cd /home/runner/work/eval-ont-agent-cl/eval-ont-agent-cl && git diff HEAD~1
+  │ HEAD src/ontology/cl-edit.owl | grep "^[+-]" | grep -v "^[+-][+-][+-]" |
+  │ head -20
+  └ 7 lines...
+
+Perfect! All the changes have been made correctly. Let me create a summary of the work completed:
+
+
+Changes   +94 -2
+Requests  1 Premium (2m 11s)
+Tokens    ↑ 741.0k • ↓ 6.3k • 716.1k (cached)
