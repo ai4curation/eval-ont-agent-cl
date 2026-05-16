@@ -1,0 +1,6 @@
+{
+  "body": "The -edit file contains `rdfs:label` annotation for several annotation properties (such as `oboInOwl:hasDbXref`, `IAO:0000115`, `oboInOwl:hasExactSynonym`, etc.) that already have a label defined in the `merged_import` module.\r\n    \r\nNot only are those labels useless (since redundant), but they are a frequent cause of spurious diffs, so they are better removed, which we do in this PR.\r\n\r\n(As a side-effect, this PR also re-serializes the edit file, which is needed because a previous AI-generated change inserted a class at the wrong place, because of course LLMs don’t know that the axioms in a OFN file are conventionally _sorted_ – e.g., the axioms about a CL:7770002 class should appear _before_ the axioms about a CL:7770003 class.)\r\n\r\ncloses #3332 ",
+  "comments": [],
+  "title": "Dont relabel imported annotation properties",
+  "url": "https://github.com/obophenotype/cell-ontology/pull/3333"
+}
