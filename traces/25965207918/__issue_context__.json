@@ -1,0 +1,6 @@
+{
+  "body": "Please check that the term does not already exist by using the ontology search tool OLS:\nhttps://www.ebi.ac.uk/ols4/ontologies/cl\n\n\n**Preferred term label**\noRGC2\n\n**Synonyms** (add reference(s), please)\n\n\n**Definition** (free text, with reference(s), please. PubMed ID format is PMID:XXXXXX)\nA conserved retinal ganglion cell orthotype whose transcriptomic profile groups together ON parasol RGCs from primate foveal and peripheral retina with their molecularly homologous mouse α RGC subtype (ON‑transient α RGC, C41) (Hahn et al., 2023; Tran et al., 2019).\n\nReference:\nPMID:37066415\nPMID:31784286\n\n**Parent cell type term** (check the hierarchy here https://www.ebi.ac.uk/ols4/ontologies/cl)\nCL_0000740\n\n**Anatomical structure where the cell type is found** (check Uberon for anatomical structures: https://www.ebi.ac.uk/ols4/ontologies/uberon)\n\n**Your ORCID**\nhttps://orcid.org/0000-0002-5507-2103\n\n**Additional notes or concerns**\n\n\n",
+  "comments": [],
+  "title": "[NTR] Create term for oRGC2",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3519"
+}
