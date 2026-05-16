@@ -1,0 +1,6 @@
+{
+  "body": "**CL term**\n[CL_0000999](http://purl.obolibrary.org/obo/CL_0000999) — CD4-positive CD11b-positive dendritic cell\n\n**Suggested revision of class hierarchy**\nChange the Equivalent To class from `conventional dendritic cell` to [CD11b-positive dendritic cell](http://purl.obolibrary.org/obo/CL_0002465).\n\n**Rationale**  \nCurrently, CD4-positive CD11b-positive dendritic cell (CL_0000999) has `conventional dendritic cell` as its Equivalent To class. We propose changing it to CD11b-positive dendritic cell. This change reflects a more natural hierarchical relationship, as CD11b-positive dendritic cell represents a parent concept encompassing CD4-positive CD11b-positive dendritic cell.\n\nA concrete example supporting this change is already present in the ontology: CD4-negative, CD8-alpha-negative, CD11b-positive dendritic cell (CL_0002454) uses CD11b-positive dendritic cell as its Equivalent To class. Applying the same principle here ensures consistency and aligns with existing ontology modeling practices.\n\nThank you for your consideration.\n",
+  "comments": [],
+  "title": "[Class hierarchy] CD4+ CD11b+ dendritic cell [CL_0000999]: Change parent to CD11b+ DC",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3379"
+}
