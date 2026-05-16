@@ -1,0 +1,22 @@
+{
+  "body": "some treat it as just under Purkinje layer, but classification under PLI (in line with some lit and WMB) seems reasonable.",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87jLB7f",
+      "author": {
+        "login": "RiveraAndrea83"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@copilot please update the subClassOf relationship for the CL term Lugaro cell (CL:0011006) from cerebellar inhibitory GABAergic interneuron (CL:4023057) to Purkinje layer interneuron (CL:4072102).",
+      "createdAt": "2026-01-28T13:29:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3550#issuecomment-3811319519",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Move Lugaro (species neutral) under PLI, in line with WMB classification",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3550"
+}
