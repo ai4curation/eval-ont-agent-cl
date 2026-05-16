@@ -1,0 +1,37 @@
+{
+  "body": "**CL term**\n[CL_0001057](http://purl.obolibrary.org/obo/CL_0001057) — myeloid dendritic cell, human\n[CL_0001058](http://purl.obolibrary.org/obo/CL_0001058) — plasmacytoid dendritic cell, human\n\n**Suggested revision of class hierarchy**\nAdd: lacks expression of CD14\nAlthough there were previous attempts to annotate DCs with CD14-negative expression (Issue [#123](https://github.com/obophenotype/cell-ontology/issues/123), [#125](https://github.com/obophenotype/cell-ontology/issues/125), [#127](https://github.com/obophenotype/cell-ontology/issues/127)), these were unfortunately closed without resolution.\n\n**textual def**\nplease add in the textual def that this cell is CD14-negative.\n\n**References**  **Add these references but do not replace exisiting references**\n\nRelevant OMIP references demonstrating standard gating strategy:\n1. [OMIP-77](https://pubmed.ncbi.nlm.nih.gov/34260151/)\n2. [OMIP-87](https://pubmed.ncbi.nlm.nih.gov/36470845/)\n3. [OMIP-94](https://pubmed.ncbi.nlm.nih.gov/37254600/)\n4. [OMIP-101](https://pubmed.ncbi.nlm.nih.gov/38343094/)\n5. [OMIP-112](https://pubmed.ncbi.nlm.nih.gov/40095400/)\n\n\nThese human dendritic cell populations are consistently defined as CD14-negative in flow cytometry gating strategies. Although some tissue-specific DC subsets (e.g., dermal DCs) may express CD14, the general population of human DCs is gated as CD14⁻ to distinguish them from monocytes.\n\n\nThank you for your consideration.\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87TaXzk",
+      "author": {
+        "login": "KazuhiroNakagawa"
+      },
+      "authorAssociation": "NONE",
+      "body": "@dosumis, @addiehl There seems to be no progress since July, I would like to know the status. ",
+      "createdAt": "2025-11-18T10:51:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3163#issuecomment-3546905828",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-87Yc5s2",
+      "author": {
+        "login": "Caroline-99"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@addiehl could you please check this out ? I agree with adding lack CD14 expression to \"[CL_0001057](http://purl.obolibrary.org/obo/CL_0001057) — myeloid dendritic cell, human and [CL_0001058](http://purl.obolibrary.org/obo/CL_0001058) — plasmacytoid dendritic cell, human\". However, I am not sure about adding it to the general human term [CL_0001056](http://purl.obolibrary.org/obo/CL_0001056) — dendritic cell, human as there are some human dendritic cells that do express CD14 (PMID: [23621371](https://pubmed.ncbi.nlm.nih.gov/23621371/), [PMID: 34279540](https://pmc.ncbi.nlm.nih.gov/articles/PMC8292131/). Thank you ",
+      "createdAt": "2025-12-09T10:23:05Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3163#issuecomment-3631455030",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[Class hierarchy] Add \"CD14 lacks\" to human dendritic cell terms",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3163"
+}
