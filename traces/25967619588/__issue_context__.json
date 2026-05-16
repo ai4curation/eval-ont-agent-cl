@@ -1,0 +1,22 @@
+{
+  "body": "Please modify the following CL term using the information below. Include the references cited but do not replace the existing ones.\n\n**CL term**\nCL_4030053\n\n**Suggested revision of textual definition**\nCorrect label to \"Islands of Calleja granule cell\"\n\nDefinition:\na GABAergic neuron that resides in the islands of calleja and shows the cytoarchitectural and molecular features characteristic of this granule-like cell population. In mice and primates, it expresses D1 and D3 dopamine receptors (Drd1; Drd3), GABAergic markers (GAD1/2) (Zhang et al., 2021; Zhang et al., 2023) and form densely packed granule cell clusters in the olfactory tubercle within the ventral striatum (Zhang et al., 2021). Moreover it receives dense dopaminergic input from the VTA, and functionally associated with self-grooming behaviors (Zhang et al., 2021) and depression-like behaviors (Zhang et al., 2023).\n\nReferences:\nPMID:37898623\nPMID:34795450\n\ninclude axiom \"Gabaergic neuron\" ",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87Tb4XL",
+      "author": {
+        "login": "RiveraAndrea83"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "links #3321 ",
+      "createdAt": "2025-11-18T12:04:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3447#issuecomment-3547301323",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[Text def] improve definion of Islands of Calleja granule cell",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3447"
+}
