@@ -185,8 +185,16 @@ obocheck: $(SRC) | all_robot_plugins
 test_obsolete: $(ONT).obo
 	! grep "! obsolete" $<
 
+.PHONY: test_no_oboInOwl_labels
+test_no_oboInOwl_labels: $(SRC)
+	@if grep -n 'AnnotationAssertion(rdfs:label oboInOwl:' $<; then \
+		echo "ERROR: Do not relabel imported oboInOwl annotation properties in $(SRC)." >&2; \
+		exit 1; \
+	fi
+
 test: obocheck \
-      test_obsolete
+      test_obsolete \
+      test_no_oboInOwl_labels
 
 
 # ----------------------------------------
