@@ -3271,6 +3271,7 @@ Declaration(Class(obo:CL_4072045))
 Declaration(Class(obo:CL_4072046))
 Declaration(Class(obo:CL_4072102))
 Declaration(Class(obo:CL_4072103))
+Declaration(Class(obo:CL_9900000))
 Declaration(Class(obo:CL_7770002))
 Declaration(Class(obo:CL_7770003))
 Declaration(Class(obo:CL_7770004))
@@ -35216,6 +35217,18 @@ AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:25465495") Annotation(ob
 AnnotationAssertion(rdfs:label obo:CL_4072103 "hair follicle dermal stem cell")
 EquivalentClasses(obo:CL_4072103 ObjectIntersectionOf(obo:CL_0000134 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002073)))
 SubClassOf(obo:CL_4072103 ObjectSomeValuesFrom(obo:RO_0002215 obo:GO_0042634))
+
+# Class: obo:CL_9900000 (transitional principal-intercalated cell of kidney collecting duct)
+
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33893305") Annotation(oboInOwl:hasDbXref "PMID:37468583") obo:IAO_0000115 obo:CL_9900000 "A kidney collecting duct epithelial cell that co-expresses markers of principal cells and intercalated cells and is enriched in chronic kidney disease.")
+AnnotationAssertion(obo:IAO_0000233 obo:CL_9900000 "https://github.com/obophenotype/cell-ontology/issues/3259")
+AnnotationAssertion(terms:contributor obo:CL_9900000 <https://orcid.org/0000-0002-2999-0103>)
+AnnotationAssertion(terms:contributor obo:CL_9900000 <https://orcid.org/0009-0000-8480-9277>)
+AnnotationAssertion(terms:date obo:CL_9900000 "2026-05-17T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:33893305") oboInOwl:hasBroadSynonym obo:CL_9900000 "hybrid principal-intercalated cell")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:37468583") Annotation(oboInOwl:hasSynonymType obo:OMO_0003000) oboInOwl:hasRelatedSynonym obo:CL_9900000 "tPC-IC cell")
+AnnotationAssertion(rdfs:label obo:CL_9900000 "transitional principal-intercalated cell of kidney collecting duct")
+SubClassOf(obo:CL_9900000 obo:CL_1000454)
 
 # Class: obo:CL_7770002 (juxtacanalicular tissue cell)
 
