@@ -230,6 +230,14 @@ For example, [erythrocyte](http://purl.obolibrary.org/obo/CL_0000765)
 subClassOf [**'has characteristic'**](http://purl.obolibrary.org/obo/RO_0000053)
 *some* [biconcave](http://purl.obolibrary.org/obo/PATO_0002039)
 
+This relation is also the correct way to capture broad epithelial
+morphologies. For example,
+[squamous epithelial cell](http://purl.obolibrary.org/obo/CL_0000076)
+can be defined as an epithelial cell with
+[flattened](http://purl.obolibrary.org/obo/PATO_0002254) morphology,
+and cuboidal epithelial cells can be defined using
+[cuboid](http://purl.obolibrary.org/obo/PATO_0001872).
+
 PATO also has a set of terms for [<u>specific cell morphologies</u>](https://www.ebi.ac.uk/ols4/ontologies/pato) (mostly
 neuronal), e.g.
 
@@ -259,4 +267,3 @@ some nucleus
 
 See
 <https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/>.
-
