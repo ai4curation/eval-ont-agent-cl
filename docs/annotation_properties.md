@@ -4,6 +4,8 @@ _Note- this page is currently under development._
 
 The Cell Ontology has the following annotation properties:
 
+Imported `oboInOwl:*` annotation properties already carry labels from the import chain. Do not add or restore `rdfs:label` assertions for those imported properties in `src/ontology/cl-edit.owl`, as doing so creates spurious serialization diffs.
+
 Annotation property	| 	Description	|	Example term	|	Example annotation | Must have? | Only one use per term is allowed?
 -- | -- | -- | --  | -- | --
 consider	|	To be used on obsoleted classes, to point to a term that should be considered by curators for use in place of the obsoleted term.  Multiple consider terms are allowed.  It can be useful to combine this with a comment to indicate when replacement would be appropriate.	|	CL:0000610 `obsolete plant cell`	|	PO:0009002 | No | No
