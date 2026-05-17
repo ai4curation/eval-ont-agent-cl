@@ -1,0 +1,52 @@
+{
+  "body": "Please check that the term does not already exist by using the ontology search tool OLS:\nhttps://www.ebi.ac.uk/ols4/ontologies/cl\n\n\n**Preferred term label**\nUnclassified Fallopian Tube Progenitor (UCFP)\n\n**Synonyms** (add reference(s), please)\nPrior work (PMID: 35320732) has referred to similar UCFP cells as clusters 2-1 and 2-2 that can give rise to epithelial and endothelial/stromal cell types through scRNA-seq and trajectory inference.\n\n**Definition** (free text, with reference(s), please. PubMed ID format is PMID:XXXXXX)\nWe propose a new, broad definition for the observed \"dual-feature\" human fallopian tube progenitor-like cells that simultaneously express epithelial (e.g., EpCAM/CD326) and endothelial (e.g., PECAM1/CD31) markers, both on the cell surface and by RNA expression that can give rise to ciliated and secretory cell types, and potentially to endothelial/stromal cell types. These \"dual-feature\" unclassified fallopian tube progenitor cells have primary been observed by single-cell RNA-seq (scRNA-seq), flow cytometry, and immunofluorescence, with the UCFP term proposed in PMID: 40475517.\n\n**Parent cell type term** (check the hierarchy here https://www.ebi.ac.uk/ols4/ontologies/cl)\nI am not entirely sure as these could exist under CL:4052019 or CL:4052018. \n\n**Anatomical structure where the cell type is found** (check Uberon for anatomical structures: https://www.ebi.ac.uk/ols4/ontologies/uberon)\nHuman fallopian tube\n\n**Your ORCID**\n0000-0002-1482-1032\n\n**Additional notes or concerns**\nI'm sure this is incomplete and is my first attempt at this :) Thank you and my apologies in advance!\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-863P-Pz",
+      "author": {
+        "login": "dosumis"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looks good, but would prefer something like 'dual-feature fallopian tube progenitor cell' as a name. I guess 'unclassified' is historical at this point - you just classified it.",
+      "createdAt": "2025-07-15T16:55:22Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3196#issuecomment-3074417651",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-8680l9V",
+      "author": {
+        "login": "Caroline-99"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Discussion with Ben: He is happy with us using `dual-feature fallopian tube progenitor cell` as the main label in CL.",
+      "createdAt": "2025-08-08T13:26:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3196#issuecomment-3167903573",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-869i1dc",
+      "author": {
+        "login": "Caroline-99"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "**Updates on text and logical defs (have been reviewed by @biobenkj ):**\n\n**label**\ndual-feature fallopian tube progenitor cell\n\n**textual definition**\n\nA bipotent progenitor cell within the human fallopian tube epithelium, characterized by the concurrent expression of epithelial (e.g., EpCAM/CD326) and endothelial (e.g., PECAM1/CD31) markers at both the cell surface and transcript levels. This cell has the capacity to differentiate into ciliated and secretory epithelial cells, as well as potentially endothelial/stromal lineages. Positioned at the apex of lineage bifurcation, the cell exhibits stem-like and endothelial features, representing an intermediate developmental state between undifferentiated progenitors and lineage-committed epithelial cells.\n\n PMID: [40475517](https://pubmed.ncbi.nlm.nih.gov/40475517/)\n\n**Synonyms**\n\nnon-ciliated secretory epithelial cell 2-1 (NCSE2-1 cells) - related synonym -  PMID: [35320732](https://pubmed.ncbi.nlm.nih.gov/35320732/)\nnon-ciliated secretory epithelial cell 2-2 (NCSE2-2 cells) - related synonym -  PMID: [35320732](https://pubmed.ncbi.nlm.nih.gov/35320732/)\nunclassified fallopian tube progenitors - exact-  PMID: [40475517](https://pubmed.ncbi.nlm.nih.gov/40475517/)\n\n**Logical definition:**\n\n'progenitor cell'\n'part of' some 'fallopian tube epithelium'\n'in taxon' some 'Homo sapiens'\n'develops into' some 'fallopian tube secretory epithelial cell'\n'develops into' some 'fallopian tube multiciliated epithelial cell'\n",
+      "createdAt": "2025-08-12T16:02:12Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3196#issuecomment-3180025692",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[NTR] Unclassified Fallopian Tube Progenitor (UCFP)",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3196"
+}
