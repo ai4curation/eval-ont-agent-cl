@@ -1,0 +1,24 @@
+pattern_name: cuboidalEpithelialCell
+pattern_iri: http://purl.obolibrary.org/obo/cl/cuboidalEpithelialCell
+
+description: An epithelial cell that has a cuboidal morphology.
+
+contributors:
+  - https://orcid.org/0000-0001-5208-3432
+  - https://orcid.org/0000-0002-6601-2165
+
+classes:
+  epithelial cell: "CL:0000066"
+  cuboid: "PATO:0001872"
+
+relations:
+  has characteristic: "RO:0000053"
+
+name:
+  text: "cuboidal epithelial cell"
+
+def:
+  text: "An epithelial cell that has a cuboidal morphology."
+
+equivalentTo:
+  text: "'epithelial cell' and ('has characteristic' some 'cuboid')"
