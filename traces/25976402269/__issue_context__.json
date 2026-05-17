@@ -1,0 +1,37 @@
+{
+  "body": "**CL terms**\nperipheral blood mononuclear cell: http://purl.obolibrary.org/obo/CL_2000001\nleukocyte: http://purl.obolibrary.org/obo/CL_0000738\nretinal pigment epithelial cell: http://purl.obolibrary.org/obo/CL_0002586\n\n**Synonyms to be added** (include synonym scope broad/exact/narrow/related and reference(s))\nPBMC\nWBC\nRPE\n\nI am working on a task in which strings representing concepts such as cell types are extracted from experimental sample metadata using an LLM and then mapped to ontologies, and we are using the Cell Ontology as one of the target ontologies.\nWhile investigating strings that were extracted by the LLM as cell types but failed to be mapped, I observed abbreviations such as PBMC, WBC, and RPE.\nIf abbreviations were registered as synonyms, our current system would be able to map these strings to the corresponding terms.\nDo you have a policy against registering abbreviations as synonyms?\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAjLh-87iAjkF",
+      "author": {
+        "login": "addiehl"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I would be happy to see these synonyms added to the appropriate terms.  \"PBMC\" and \"WBC\" can probably be safely added as exact synonyms.  Somebody who knows more than me should make the judgment about \"RPE\" as to what type of synonym it should be.\nThanks, Alex",
+      "createdAt": "2026-01-23T18:53:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3559#issuecomment-3791796485",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAjLh-87iAtPE",
+      "author": {
+        "login": "scheuerm"
+      },
+      "authorAssociation": "COLLABORATOR",
+      "body": "Yes, RPE would be appropriate to add as a synonym for retinal pigment epithelial cell",
+      "createdAt": "2026-01-23T19:02:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/obophenotype/cell-ontology/issues/3559#issuecomment-3791836100",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "[Synonym] abbreviations like PBMC",
+  "url": "https://github.com/obophenotype/cell-ontology/issues/3559"
+}
