@@ -24,6 +24,39 @@ This is a listing of all the patterns hosted as part of this directory
 | CL:4023077 | bitufted neuron       | CL:0000099 | interneuron  | PATO:0070012 | bitufted cell morphology |
 
 See full table [here](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/data/matches/cellBearerOfQuality.tsv)
+### Cuboidal epithelial cell
+*An epithelial cell type characterized by a cuboidal morphology.*
+
+| Attribute | Info |
+|----------|----------|
+| IRI | http://purl.obolibrary.org/obo/cl/cuboidalEpithelialCell |
+| Name | cuboidalEpithelialCell |
+| Classes | CL:0000000, PATO:0001872,  |
+| Variables | cell (CL:0000000), cuboidal (PATO:0001872),  |
+| Contributors | [0000-0001-5208-3432](https://orcid.org/0000-0001-5208-3432), [0000-0002-6601-2165](https://orcid.org/0000-0002-6601-2165),  |
+
+#### Data preview:
+| defined:class                             | defined:class:label       | cell                                      | cell:label      |
+|:------------------------------------------|:--------------------------|:------------------------------------------|:----------------|
+| CL:9900001 | cuboidal epithelial cell | CL:0000066 | epithelial cell |
+
+### Squamous epithelial cell
+*An epithelial cell type characterized by a flattened (squamous) morphology.*
+
+| Attribute | Info |
+|----------|----------|
+| IRI | http://purl.obolibrary.org/obo/cl/squamousEpithelialCell |
+| Name | squamousEpithelialCell |
+| Classes | CL:0000000, PATO:0002254,  |
+| Variables | cell (CL:0000000), flattened (PATO:0002254),  |
+| Contributors | [0000-0001-5208-3432](https://orcid.org/0000-0001-5208-3432), [0000-0002-6601-2165](https://orcid.org/0000-0002-6601-2165),  |
+
+#### Data preview:
+| defined:class                             | defined:class:label                     | cell                                      | cell:label                 |
+|:------------------------------------------|:----------------------------------------|:------------------------------------------|:---------------------------|
+| CL:0000076 | squamous epithelial cell                | CL:0000066 | epithelial cell |
+| CL:0002653 | squamous endothelial cell               | CL:0000115 | endothelial cell |
+| CL:0008040 | squamous endothelial cell of venule     | CL:0002139 | endothelial cell of venule |
 ### Cell capable of biological process
 *Any cell that is involved in/capable of a particular biological process, such as acid secretion.*
 
@@ -91,4 +124,3 @@ See full table [here](https://github.com/monarch-initiative/mondo/blob/master/sr
 | Variables | cell (CL:0000000), taxon (NCBITaxon:1),  |
 | Contributors | [0000-0001-5208-3432](https://orcid.org/0000-0001-5208-3432), [0000-0002-6601-2165](https://orcid.org/0000-0002-6601-2165),  |
 | Examples |  |
-

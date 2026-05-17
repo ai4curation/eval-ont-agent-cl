@@ -3293,6 +3293,7 @@ Declaration(Class(obo:CL_7770003))
 Declaration(Class(obo:CL_7770004))
 Declaration(Class(obo:CL_7770005))
 Declaration(Class(obo:CL_7770006))
+Declaration(Class(obo:CL_9900001))
 Declaration(Class(obo:CP_0000000))
 Declaration(Class(obo:CP_0000025))
 Declaration(Class(obo:CP_0000027))
@@ -4524,9 +4525,10 @@ SubClassOf(obo:CL_0000075 obo:CL_0000066)
 
 # Class: obo:CL_0000076 (squamous epithelial cell)
 
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Wikipedia:Squamous_epithelial_cell") obo:IAO_0000115 obo:CL_0000076 "An epithelial cell that has a flattened morphology.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:CL_0000076 "CALOHA:TS-1249")
 AnnotationAssertion(rdfs:label obo:CL_0000076 "squamous epithelial cell")
-SubClassOf(obo:CL_0000076 obo:CL_0000066)
+EquivalentClasses(obo:CL_0000076 ObjectIntersectionOf(obo:CL_0000066 ObjectSomeValuesFrom(obo:RO_0000053 obo:PATO_0002254)))
 
 # Class: obo:CL_0000077 (mesothelial cell)
 
@@ -6094,15 +6096,14 @@ SubClassOf(obo:CL_0000239 obo:CL_0000075)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:30422572") Annotation(oboInOwl:hasDbXref "Wikipedia:Epithelium") Annotation(oboInOwl:hasDbXref "Wikipedia:Stratified_squamous_epithelium") obo:IAO_0000115 obo:CL_0000240 "A stratified epithelial cell that is part of squamous epithelium, characterized by multiple layers of cells. The basal layer is directly attached to the basement membrane and the apical layer consists of flattened squamous cells. This provides a protective barrier, commonly found in areas subject to abrasion, such as the skin, oral cavity, and esophagus.")
 AnnotationAssertion(rdfs:label obo:CL_0000240 "stratified squamous epithelial cell")
-EquivalentClasses(obo:CL_0000240 ObjectIntersectionOf(obo:CL_0000079 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0006915)))
-SubClassOf(obo:CL_0000240 obo:CL_0000076)
+EquivalentClasses(obo:CL_0000240 ObjectIntersectionOf(obo:CL_0000079 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0006915) ObjectSomeValuesFrom(obo:RO_0000053 obo:PATO_0002254)))
 
 # Class: obo:CL_0000241 (stratified cuboidal epithelial cell)
 
 AnnotationAssertion(Annotation(oboInOwl:hasDbXref "PMID:30422572") Annotation(oboInOwl:hasDbXref "Wikipedia:Stratified_cuboidal_epithelium") obo:IAO_0000115 obo:CL_0000241 "A stratified epithelial cell that is part of cuboidal epithelium, characterized by multiple layers of cuboidal cells forming the apical layer. This provides a protective lining for ducts in large glands, such as sweat glands.")
 AnnotationAssertion(rdfs:label obo:CL_0000241 "stratified cuboidal epithelial cell")
 EquivalentClasses(obo:CL_0000241 ObjectIntersectionOf(obo:CL_0000079 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0010077)))
-SubClassOf(obo:CL_0000241 obo:CL_0000075)
+SubClassOf(obo:CL_0000241 obo:CL_9900001)
 
 # Class: obo:CL_0000242 (Merkel cell)
 
@@ -14645,6 +14646,7 @@ AnnotationAssertion(Annotation(oboInOwl:hasSynonymType obo:OMO_0003000) oboInOwl
 AnnotationAssertion(rdfs:label obo:CL_0002062 "pulmonary alveolar type 1 cell")
 EquivalentClasses(obo:CL_0002062 ObjectIntersectionOf(obo:CL_0000322 ObjectSomeValuesFrom(obo:RO_0002215 obo:GO_0007585)))
 SubClassOf(obo:CL_0002062 obo:CL_0000076)
+SubClassOf(obo:CL_0002062 ObjectSomeValuesFrom(obo:RO_0000053 obo:PATO_0002254))
 
 # Class: obo:CL_0002063 (pulmonary alveolar type 2 cell)
 
@@ -35547,6 +35549,16 @@ AnnotationAssertion(obo:IAO_0100001 obo:CP_0000028 obo:CL_0017503)
 AnnotationAssertion(rdfs:comment obo:CP_0000028 "ID was moved to the CL namespace. Use CL:0017503.")
 AnnotationAssertion(rdfs:label obo:CP_0000028 "obsolete CP:0000028")
 AnnotationAssertion(owl:deprecated obo:CP_0000028 "true"^^xsd:boolean)
+
+# Class: obo:CL_9900001 (cuboidal epithelial cell)
+
+AnnotationAssertion(obo:IAO_0000233 obo:CL_9900001 <https://github.com/obophenotype/cell-ontology/issues/3536>)
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "Wikipedia:Cuboidal_epithelial_cell") obo:IAO_0000115 obo:CL_9900001 "An epithelial cell that has a cuboidal morphology.")
+AnnotationAssertion(terms:creator obo:CL_9900001 "GitHub Copilot")
+AnnotationAssertion(terms:date obo:CL_9900001 "2026-05-17T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label obo:CL_9900001 "cuboidal epithelial cell")
+EquivalentClasses(obo:CL_9900001 ObjectIntersectionOf(obo:CL_0000066 ObjectSomeValuesFrom(obo:RO_0000053 obo:PATO_0001872)))
+SubClassOf(obo:CL_9900001 obo:CL_0000075)
 
 # Class: obo:CP_0000035 (obsolete CP:0000035)
 
